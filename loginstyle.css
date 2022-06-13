@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Scrollbar  */
+body::-webkit-scrollbar {
+    display: none; 
+}
+body {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    background-color:#6CC4A1;
+}
+
+/* log in  */
+.toCenter{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .login{
+    height: 320px;
+    width: 400px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 450px; */
+    margin: 200px 0 200px 0;
+    border-radius: 10px;
+    border: outset 5px;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 10px;
+    padding-left: 20px;
+  }
+  
+  .loginTitle{
+    font-size: larger;
+    font-weight: bolder;
+    height: 30px;
+    width: 80%;
+    padding-bottom: 40px;
+    border-bottom: #616161 2px solid;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  form{
+    width: 100%;
+  }
+  
+  form > div{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+  }
+  
+  .formLabel{
+    font-weight: bold;
+    margin-right: 50px;
+  }
+  
+  input{
+    border-radius: 18px;
+    height: 40px;
+    width: 90%;
+    margin-top: 10px;
+    background-color: #e3f9fe;
+    border: none;
+    padding: 0px 12px;
+  }
+
+  button{
+    height: 40px;
+    width: 40%;
+    background-color: #AEDBCE;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: inset 2px;
+  }
+  
+  #loginText{
+    font-weight: bold;
+    color: rgb(77, 76, 76);
+  }
+  
+  .errormsg{
+    font-size: 12px;
+    padding-left: 5px;
+    color: red;
+  }
+  
+  #errorConfirm{
+    margin-top: 35px;
+    margin-left: 5px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .gotoSignUp{
+    text-decoration: none;
+    text-align: center;
+    color: #616161;
+    font-size: 15px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .login{
+      height: 180px;
+      width: 230px;
+      
+      margin: 100px 0 28px 0;
+      border-radius: 5px;
+      border: outset 3px;
+      padding: 6px;
+      padding-left: 12px;
+      }
+
+    .loginTitle{
+      font-size: small;
+      font-weight:550;
+      height: 17px;
+      border-bottom: #616161 1px solid;
+      margin-bottom: 13px;
+      padding-bottom: 22px;
+    }
+  
+    form > div{
+      height: 45px;
+    }
+  
+    .formLabel{
+      font-weight: bold;
+      margin-right: 28.5px;
+      font-size: 10px;
+    }
+
+    input{
+      border-radius: 6px;
+      height: 21px;
+      width: 90%;
+      margin-top: 6px;
+      font-size: 8px;
+      border-width: 1.5px;
+      padding: 0px 5px;
+    }
+
+    button{
+      height: 23px;
+      border-radius: 12px;
+      border-width: 1.5px;
+    }
+
+    #loginText{
+      font-size: 9px;
+      font-weight: 300;
+    }
+  
+    #errorConfirm{
+      margin-top: 20px;
+      margin-left: 3px;
+      height: 12.5px;
+      margin-bottom: 8.5px;
+    }
+  
+    .errormsg{
+      font-size: 8px;
+    }
+    .gotoSignUp{
+        font-size: 10px;
+    }
+  }
