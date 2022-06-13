@@ -1,16 +1,16 @@
 var errorEmail = document.getElementById("errorEmail");
-var errorUsername = document.getElementById("errorUsername");
+var errorName = document.getElementById("errorName");
 var errorPassword = document.getElementById("errorPassword");
 var errorConfirmPassword = document.getElementById("errorConfirmPassword");
 var errorConfirm = document.getElementById("errorConfirm");
 
 function submitForm(){
-  var form = document.getElementById("form_regis");
+  var form = document.getElementById("form_signup");
   form.submit();
 }
 
 function validate(){
-  if(validateEmail() && validateUsername() && validatePassword() && validateConfirmPassword() && validateConfirmTnC()){
+  if(validateEmail() && validateName() && validatePassword() && validateConfirmPassword() && validateConfirmTnC()){
     submitForm();
   }
   return false;
@@ -35,19 +35,19 @@ function validateEmail(){
   return true;
 }
 
-function validateUsername(){
-  var username = document.getElementById("username").value;
+function validateName(){
+  var name = document.getElementById("name").value;
   
-  if(username == ""){
-    errorUsername.innerHTML = "Username must be filled!";
+  if(name == ""){
+    errorName.innerHTML = "Name must be filled!";
     return false;
   }
-  if(username.length < 5){
-    errorUsername.innerHTML = "Username must contain at least 5 characters."
+  if(name.length < 5){
+    errorName.innerHTML = "Name must contain at least 5 characters."
     return false;
   }
 
-  errorUsername.innerHTML = '';
+  errorName.innerHTML = '';
   return true;
 }
 
