@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/console.png" type="image/x-icon">
+    <script src="./validationsignup.js" defer></script>
+    <title>Sign Up - SE</title>
+    <link rel="stylesheet" href="signupstyle.css">
+</head>
+<body>
+    <div class="toCenter">
+        <div class="login">
+          <div class="loginTitle">Sign Up</div>
+          <form action="" id="form_signup" name="formSignup">
+            <div class="email">
+                <div class="formLabel">Email</div>
+                <input type="email" name="email" id="email" placeholder="Email..." required>
+                <div id="errorEmail" class="errormsg"></div>
+            </div>
+            <div class="username">
+                <div class="formLabel">Username</div>
+                <input type="text" name="username" id="username" placeholder="Username...">
+                <div id="errorUsername" class="errormsg"></div>
+            </div>
+            <div class="password">
+                <div class="formLabel">Password</div>
+                <input type="password" name="password" id="password" placeholder="Password...">
+                <div id="errorPassword" class="errormsg"></div>
+            </div>
+            <div class="confirmPassword">
+                <div class="formLabel">Confirm Password</div>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Password...">
+                <div id="errorConfirmPassword" class="errormsg"></div>
+            </div>
+            <label class="container">I agree with the terms and conditions.
+                <input type="checkbox" name="confirmTnC" id="confirmTnC">
+                <span class="checkmark"></span>
+            </label>
+            <div id="errorConfirm" class="errormsg"></div>
+            <button type="button" value="Submit" onclick="validate()"><div id="loginText">Sign Up</div></button>
+            <a href="./login.html" class="gotoSignUp"><div>Already have an account?</div></a>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
