@@ -1,4 +1,4 @@
-var errorUsername = document.getElementById("errorUsername");
+var errorEmail = document.getElementById("errorEmail");
 var errorPassword = document.getElementById("errorPassword");
 
 function submitForm(){
@@ -7,25 +7,28 @@ function submitForm(){
 }
 
 function validate(){
-  if(validateUsername() && validatePassword()){
+  if(validateEmail() && validatePassword()){
     submitForm();
   }
   return false;
 }
 
-function validateUsername(){
-  var username = document.getElementById("username").value;
-  
-  if(username == ""){
-    errorUsername.innerHTML = "Username must be filled!";
-    return false;
-  }
-  if(username.length < 5){
-    errorUsername.innerHTML = "Username must contain at least 5 characters."
+function validateEmail(){
+  var email = document.getElementById("email").value;
+
+  if(email == ''){
+    errorEmail.innerHTML = "Email must be filled!";
     return false;
   }
 
-  errorUsername.innerHTML = '';
+  var atSymbol = email.indexOf('@');
+  var dot = email.lastIndexOf('.');
+
+  if(atSymbol < 1 || dot <= atSymbol + 1 || dot == email.length - 1 || email.indexOf("..") != -1 || email.indexOf(" ") != -1){
+    errorEmail.innerHTML = "Input valid Email!!";
+    return false;
+  }
+  errorEmail.innerHTML = '';
   return true;
 }
 
