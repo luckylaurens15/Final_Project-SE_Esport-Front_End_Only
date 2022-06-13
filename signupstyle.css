@@ -56,6 +56,11 @@ body {
     flex-direction: column;
     height: 80px;
   }
+
+  .formLabel{
+    font-weight: normal;
+    margin-right: 50px;
+  }
   
   input{
     border-radius: 18px;
