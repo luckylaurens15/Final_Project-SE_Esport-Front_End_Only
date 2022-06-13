@@ -1,4 +1,5 @@
 var errorEmail = document.getElementById("errorEmail");
+var errorPhone = document.getElementById("errorPhone");
 var errorName = document.getElementById("errorName");
 var errorPassword = document.getElementById("errorPassword");
 var errorConfirmPassword = document.getElementById("errorConfirmPassword");
@@ -10,7 +11,7 @@ function submitForm(){
 }
 
 function validate(){
-  if(validateEmail() && validateName() && validatePassword() && validateConfirmPassword() && validateConfirmTnC()){
+  if(validateEmail() && validatePhone() && validateName() && validatePassword() && validateConfirmPassword() && validateConfirmTnC()){
     submitForm();
   }
   return false;
@@ -34,6 +35,28 @@ function validateEmail(){
   errorEmail.innerHTML = '';
   return true;
 }
+
+function validatePhone(){
+    var phone = document.getElementById("phone").value;
+    if(phone == ""){
+      errorPhone.innerHTML = "Phone Number must be filled!";
+      return false;
+    }
+    var flag = false;
+    for (var i =0; i<phone.length ; i++){
+        if (phone.charAt(i) < '0' ||phone.charAt(i) > '9' ){
+            flag = true;
+            break;
+        }
+    }
+    if(flag){
+      errorPhone.innerHTML = "Phone Number must be numeric."
+      return false;
+    }
+  
+    errorPhone.innerHTML = '';
+    return true;
+  }
 
 function validateName(){
   var name = document.getElementById("name").value;
