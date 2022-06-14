@@ -88,6 +88,10 @@ input{
     width: 300px;
 }
 
+.btn:hover{
+    width: 310px;
+}
+
 @media screen and (max-width: 800px) {
     .header{
         display: flex;
@@ -120,7 +124,7 @@ input{
         border: none;
         padding: 0px 12px;
     }
-    
+
     .mySlides img{
         width: 200%;
     }
@@ -137,5 +141,7 @@ input{
     .btn{
         width: 110px;
     }
-
+    .btn:hover{
+        width: 120px;
+    }
 }
