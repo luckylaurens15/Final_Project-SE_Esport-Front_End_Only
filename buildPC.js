@@ -419,7 +419,7 @@ function next(){
     }
     else if (index == 9){
         document.getElementById("stages").innerHTML = 
-        `<div class="display" style="height: 900px;" id="stages">
+        `<div class="display" style="height: 1200px;" id="stages">
         <p class="title"> Choose Your PSU</p>
         <ul>
             <li >
